@@ -56,7 +56,7 @@ module.exports = {
   entry: {
     app: [
       'babel-polyfill',
-      './index.jsx'
+      './index.js'
     ],
     vendor: ['react']
   },
@@ -118,7 +118,7 @@ module.exports = {
   devServer: {
     contentBase: './src',
     historyApiFallback: true,
-    port: 5050,
+    // proxy: { '*': 'localhost:3000' },
     compress: isProd,
     inline: true,
     hot: true,
