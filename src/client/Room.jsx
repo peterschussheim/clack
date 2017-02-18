@@ -10,10 +10,10 @@ class Room extends React.Component {
   }
 
   componentWillMount() {
-    this.socket = io('/')
+    this.socket = io('http://localhost:8081/')
     const name = window.localStorage.getItem('currentUser');
     this.setState({
-      name,
+      name: 'Peter',
       messages: [],
     })
   }

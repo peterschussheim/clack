@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import createLogger from 'redux-logger'
 
 import io from 'socket.io-client'
-export const socket = io('http://localhost:8080')
+export const socket = io('http://localhost:8081/')
 import Landing from './client/Landing';
 import Room from './client/Room';
 
