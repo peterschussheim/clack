@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-import findIndex from 'lodash/findIndex';
+
 import { LEAVE_SESSION, CREATE_SESSION_SUCCESS, JOIN_SESSION } from './session';
 
 export const ADD_MESSAGE = 'clack/messages/add';
@@ -22,3 +22,10 @@ export default function reducer(state = [], action) {
       return state;
   }
 }
+
+export const addPost = createAction(ADD_MESSAGE, (messageType, content) => ({
+  messageType,
+  content,
+}));
+
+export const addMessageSuccess = createAction(ADD_MESSAGE_SUCCESS);
