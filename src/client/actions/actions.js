@@ -1,6 +1,4 @@
-import { SET_CURRENT_USER } from './actionTypes';
+import { createAction } from 'redux-actions';
 
-export const setCurrentUser = currentUser => ({
-  type: SET_CURRENT_USER,
-  currentUser,
-});
+export const INIT = 'clack/init';
+export const init = createAction(INIT);
