@@ -123,6 +123,9 @@ module.exports = {
     compress: isProd,
     inline: true,
     hot: true,
+    proxy: {
+      '/': 'http://localhost:8081'
+    },
     stats: {
       assets: true,
       children: false,
